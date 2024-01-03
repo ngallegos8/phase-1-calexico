@@ -50,7 +50,7 @@ fetch("http://localhost:3000/menu")
 
 
        const detailPrice = document.querySelector("#dish-price")
-       detailPrice.textContent = menuData.price
+       detailPrice.textContent = `$${menuData.price}`
 
 
        bagCount.textContent = menuData.number_in_bag
@@ -70,6 +70,54 @@ fetch("http://localhost:3000/menu")
 
 
 
+
+
+            //STEPHEN SOLUTION
+    //  let currentDish;
+    //  fetch("http://localhost:3000/menu")
+    //  .then(result => result.json())
+    //  .then(menuData => {
+    //      buildMenu(menuData)
+    //      setDish(menuData[0])
+    //      setUpCart()
+    //  })
+    //  function buildMenu(menuData){
+    //      const menuList = document.querySelector("#menu-items")
+    //      menuData.forEach(item => {
+    //          console.log(item)
+    //          let menuListItem = document.createElement("span")
+    //          menuListItem.textContent = item.name
+    //          menuList.append(menuListItem)
+     
+    //          menuListItem.addEventListener("click", ()=>{
+    //              setDish(item)
+    //          })
+    //      })
+    //  }
+    //  function setDish(dish){
+    //      currentDish = dish
+    //      console.log(dish)
+    //      let dishImage = document.querySelector("#dish-image")
+    //      let dishName = document.querySelector("#dish-name")
+    //      let dishDescription = document.querySelector("#dish-description")
+    //      let dishPrice = document.querySelector("#dish-price")
+    //      let numberInCart = document.querySelector("#number-in-cart")
+    //      dishImage.src = dish.image
+    //      dishName.textContent = dish.name
+    //      dishDescription.textContent = dish.description
+    //      dishPrice.textContent = `$${dish.price}`
+    //      numberInCart.textContent = dish.number_in_bag
+    //  }
+    //  function setUpCart(){
+    //      let addToCart = document.querySelector("#cart-form")
+    //      addToCart.addEventListener("submit", (event)=>{
+    //          event.preventDefault()
+    //          currentDish.number_in_bag += parseInt(event.target["cart-amount"].value)
+    //          setDish(currentDish)
+    //          addToCart.reset()
+     
+    //      })
+    //  }
 
 
 
@@ -131,5 +179,5 @@ fetch("http://localhost:3000/menu")
 
 
 
-
+ 
 
